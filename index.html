@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ondine, Bantry Bay — Halcyon &amp; Vane</title>
+  <meta name="description" content="Ondine: a clifftop residence above Bantry Bay, Cape Town. Offered by Halcyon & Vane, private property.">
+  <meta name="theme-color" content="#151412">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ondine House, Bantry Bay">
+  <meta property="og:description" content="A clifftop residence held between the Atlantic and the mountain. A scroll-driven film by Halcyon &amp; Vane.">
+  <!-- Link previews need an absolute URL. -->
+  <meta property="og:image" content="https://momonimome.github.io/ondine-house/social-preview.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23151412'/%3E%3Ctext x='32' y='44' font-family='Didot,Bodoni 72,serif' font-size='34' text-anchor='middle' fill='%23f4f0e8'%3EH%3Ctspan fill='%23b08d57' font-style='italic'%3E%26%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..700&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+  <link rel="preload" as="image" href="frames/frame_0001.webp" type="image/webp">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+  <!-- 1. Loader -->
+  <div id="loader" role="status" aria-live="polite">
+    <div class="loader-brand">
+      <span class="wordmark">Halcyon <em>&amp;</em> Vane</span>
+      <span class="loader-sub">Ondine · Bantry Bay</span>
+    </div>
+    <div class="loader-track"><div id="loader-bar"></div></div>
+    <span id="loader-percent">0%</span>
+  </div>
+
+  <!-- 2. Fixed header -->
+  <header class="site-header">
+    <a class="logo" href="#top" data-goto="0" aria-label="Halcyon and Vane, back to top">
+      <span class="wordmark">Halcyon <em>&amp;</em> Vane</span>
+      <span class="logo-rule" aria-hidden="true"></span>
+      <span class="logo-sub">Private Property</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#setting" data-goto="setting">Setting</a>
+      <a href="#residence" data-goto="residence">Residence</a>
+      <a href="#interior" data-goto="interior">Interior</a>
+      <a href="#viewing" data-goto="viewing" class="nav-cta">Enquire</a>
+    </nav>
+  </header>
+
+  <!-- 3. Hero -->
+  <section class="hero-standalone" id="top" aria-label="Ondine">
+    <div class="hero-inner">
+      <span class="section-label hero-label">Bantry Bay, Cape Town</span>
+      <h1 class="hero-heading" aria-label="Ondine House">
+        <span class="word"><span class="word-inner">Ondine</span></span>
+        <span class="word word-italic"><span class="word-inner">House</span></span>
+      </h1>
+      <p class="hero-tagline">A clifftop residence held between the Atlantic and the mountain.</p>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">
+      <span>Scroll to arrive</span>
+      <span class="scroll-cue-line"></span>
+    </div>
+  </section>
+
+  <!-- 4. Canvas -->
+  <div class="canvas-wrap" aria-hidden="true">
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <!-- Readability scrims (fixed, driven by scroll) -->
+  <div class="scrim scrim-left" aria-hidden="true"></div>
+  <div class="scrim scrim-right" aria-hidden="true"></div>
+  <div class="scrim scrim-sand" aria-hidden="true"></div>
+  <div class="scrim scrim-center" aria-hidden="true"></div>
+
+  <!-- 5. Overlay -->
+  <div id="dark-overlay" aria-hidden="true"></div>
+
+  <!-- 6. Marquee -->
+  <div class="marquee-wrap" data-scroll-speed="-28" data-enter="9" data-leave="22" aria-hidden="true">
+    <div class="marquee-text">Atlantic Seaboard <i>·</i> Bantry Bay <i>·</i> Cape Town <i>·</i> Atlantic Seaboard <i>·</i> Bantry Bay <i>·</i></div>
+  </div>
+
+  <!-- Signature: the approach gauge -->
+  <div class="approach" aria-hidden="true">
+    <div class="approach-track"><span class="approach-fill"></span><span class="approach-dot"></span></div>
+    <ol class="approach-stops">
+      <li data-at="0">Cliff</li>
+      <li data-at="0.3">Pool</li>
+      <li data-at="0.56">Façade</li>
+      <li data-at="0.78">Living</li>
+    </ol>
+  </div>
+
+  <!-- 7. Scroll container -->
+  <main id="scroll-container">
+
+    <section class="scroll-section align-left" id="setting"
+             data-enter="20" data-leave="32" data-animation="slide-left" data-scrim="left">
+      <div class="section-inner">
+        <h2 class="section-heading">Where the city ends in stone and sea.</h2>
+        <p class="section-body">Ondine sits on a granite ledge above Bantry Bay. Lion’s Head rises behind it, Table Mountain holds the skyline, and to the west there is only the Atlantic.</p>
+        <p class="section-note">33.92° S · 18.38° E — 40 m above the tide line</p>
+      </div>
+    </section>
+
+    <section class="scroll-section align-right" id="outdoor"
+             data-enter="34" data-leave="46" data-animation="clip-reveal" data-scrim="right">
+      <div class="section-inner">
+        <h2 class="section-heading">A pool that runs to the horizon.</h2>
+        <p class="section-body">An eighteen-metre infinity edge, cantilevered over the rocks. Bleached-oak terraces step out from every room, so mornings begin outside and evenings end there.</p>
+        <p class="section-note">Heated infinity pool · 340 m² of terrace</p>
+      </div>
+    </section>
+
+    <section class="scroll-section section-stats" id="residence"
+             data-enter="48" data-leave="60" data-animation="scale-up" data-scrim="none">
+      <div class="section-inner stats-inner">
+        <div class="stats-grid">
+          <div class="stat">
+            <span class="stat-figure"><span class="stat-number" data-value="6" data-decimals="0">6</span></span>
+            <span class="stat-label">Bedrooms, en suite</span>
+          </div>
+          <div class="stat">
+            <span class="stat-figure"><span class="stat-number" data-value="7" data-decimals="0">7</span></span>
+            <span class="stat-label">Bathrooms</span>
+          </div>
+          <div class="stat">
+            <span class="stat-figure"><span class="stat-number" data-value="1240" data-decimals="0">1,240</span><span class="stat-suffix">m²</span></span>
+            <span class="stat-label">Interior floor area</span>
+          </div>
+          <div class="stat">
+            <span class="stat-figure"><span class="stat-number" data-value="2850" data-decimals="0">2,850</span><span class="stat-suffix">m²</span></span>
+            <span class="stat-label">Clifftop plot</span>
+          </div>
+          <div class="stat">
+            <span class="stat-figure"><span class="stat-number" data-value="12" data-decimals="0">12</span><span class="stat-suffix">min</span></span>
+            <span class="stat-label">To the city centre</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scroll-section align-left" id="architecture"
+             data-enter="62" data-leave="72" data-animation="slide-right" data-scrim="left">
+      <div class="section-inner">
+        <h2 class="section-heading">Curved glass. No&nbsp;threshold.</h2>
+        <p class="section-body">The façade follows the cliff in one sweep of board-formed concrete and floor-to-ceiling glass. The doors slide away into the walls, and terrace and living room become a single floor.</p>
+        <p class="section-note">Atelier Ndlovu Maas · Completed 2024</p>
+      </div>
+    </section>
+
+    <section class="scroll-section align-right" id="interior"
+             data-enter="74" data-leave="84" data-animation="rotate-in" data-scrim="right">
+      <div class="section-inner">
+        <h2 class="section-heading">A room the height of two.</h2>
+        <p class="section-body">The living room rises through both floors and fills with western light. Travertine underfoot, white oak in the joinery, linen at the glass: materials chosen to age quietly.</p>
+        <p class="section-note">Double-height living · Travertine &amp; white oak</p>
+      </div>
+    </section>
+
+    <section class="scroll-section align-right section-cta" id="viewing"
+             data-enter="88" data-leave="100" data-animation="clip-left" data-persist="true" data-scrim="sand">
+      <div class="section-inner">
+        <h2 class="section-heading">See the light for yourself.</h2>
+        <div class="section-body price">
+          <span class="price-label">Asking price</span>
+          <span class="price-value">R 148 000 000</span>
+        </div>
+        <a class="cta-button" href="mailto:viewings@halcyonvane.co.za?subject=Private%20viewing%20%E2%80%94%20Ondine%2C%20Bantry%20Bay">
+          <span>Book a private viewing</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+        <div class="section-note agent">
+          <span class="agent-name">Amara Castellan</span>
+          <span class="agent-role">Principal, Atlantic Seaboard</span>
+          <a href="tel:+27215550148">+27 21 555 0148</a>
+          <a href="mailto:amara@halcyonvane.co.za">amara@halcyonvane.co.za</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

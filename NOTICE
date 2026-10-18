@@ -1,0 +1,24 @@
+Ondine House
+Copyright (c) 2026 usman. Code released under the MIT License (see LICENSE).
+
+Fiction
+  Halcyon & Vane, Ondine House, Atelier Ndlovu Maas and Amara Castellan are
+  invented for this project. The property, price, figures and contact details
+  are placeholders, not a real listing.
+
+Video frames, frames/*.webp and frames-mobile/*.webp
+  Extracted with FFmpeg from an AI-generated drone video made with Kling AI.
+  The Kling AI watermark is visible in the lower-right corner of each frame.
+  The frames, and the screenshots and previews in docs/ that show them, are
+  not covered by the MIT License; their use is subject to Kling AI's terms.
+
+Third-party code (loaded from the jsDelivr CDN, not redistributed here)
+  GSAP 3.12.5 and ScrollTrigger, by GreenSock
+    Licence: GSAP Standard License, https://gsap.com/standard-license
+  Lenis 1.1.13, by darkroom.engineering
+    Licence: MIT, https://github.com/darkroomengineering/lenis
+
+Typefaces (served by Google Fonts, not redistributed here)
+  Bodoni Moda, by Owen Earl (indestructible type*), SIL Open Font License 1.1
+  Hanken Grotesk, by Alfredo Marco Pradil (Hanken Design Co.),
+    SIL Open Font License 1.1

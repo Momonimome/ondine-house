@@ -1,0 +1,17 @@
+{
+  "name": "ondine-house",
+  "version": "1.0.0",
+  "description": "A scroll-driven luxury property landing page: a drone video scrubbed frame by frame on a canvas, with GSAP-choreographed editorial typography.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node test/server.js",
+    "test": "node test/scroll.test.js",
+    "screenshots": "node test/screenshots.js",
+    "frames": "node test/extract-frames.js"
+  }
+}

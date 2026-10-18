@@ -1,0 +1,7 @@
+node_modules/
+_site/
+test-results/
+.cache/
+
+# Local Claude Code skills and the 8.6 MB source video (frames/ is what ships)
+.claude/
