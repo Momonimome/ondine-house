@@ -8,7 +8,7 @@ Plain HTML, CSS and JavaScript, with no build step.
 
 **View it:** <https://momonimome.github.io/ondine-house/>
 
-![Scrolling through Ondine House](docs/preview.gif)
+![Scrolling through Ondine House](docs/preview.webp)
 
 ![Ondine House at 1440px: the pool section](docs/screenshot.png)
 
@@ -57,7 +57,7 @@ later and no npm packages; set `CHROME_PATH` if Chrome is not in its usual place
 | ---------------------- | --------------------------------------------------------------- |
 | `npm start`            | Serve the site at <http://localhost:8000/>                      |
 | `npm test`             | End-to-end scroll test at 1440px, 390px, 375px and reduced motion |
-| `npm run screenshots`  | Regenerate the screenshots and the GIF/MP4 previews in `docs/`  |
+| `npm run screenshots`  | Regenerate the screenshots and the WebP/MP4 previews in `docs/`  |
 | `npm run frames -- <video>` | Re-extract `frames/` and `frames-mobile/` from a video with FFmpeg |
 
 The last two need FFmpeg; set `FFMPEG_PATH` if it is not on your `PATH`.

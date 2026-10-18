@@ -1,7 +1,7 @@
 // Regenerate the images in docs/: two screenshots, a social preview card, and a
-// scroll-through preview as GIF (for the README) and MP4 (for sharing).
+// scroll-through preview as animated WebP (for the README) and MP4 (for sharing).
 //   node test/screenshots.js
-// The GIF and MP4 need FFmpeg; set FFMPEG_PATH if it is not on PATH.
+// The WebP and MP4 need FFmpeg; set FFMPEG_PATH if it is not on PATH.
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -82,8 +82,9 @@ const span = shots.at(-1).t - shots[0].t;
 console.log(`recorded ${shots.length} frames over ${span.toFixed(1)} s (${(shots.length / span).toFixed(1)} fps)`);
 
 const run = (args) => execFileSync(ffmpeg, ['-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', listFile, ...args], { stdio: 'inherit' });
-run(['-vf', 'fps=30,format=yuv420p', '-c:v', 'libx264', '-crf', '22', '-preset', 'slow', '-movflags', '+faststart', path.join(DOCS, 'preview.mp4')]);
-run(['-vf', 'setpts=PTS/1.35,fps=12,scale=640:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=160:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle',
-  '-loop', '0', path.join(DOCS, 'preview.gif')]);
+// Kept small on purpose (about 1 MB each): GitHub pages load faster and slow uploads finish.
+// Animated WebP is a fraction of the size of an equivalent GIF and GitHub renders it in READMEs.
+run(['-vf', 'fps=30,scale=960:-2:flags=lanczos,format=yuv420p', '-c:v', 'libx264', '-crf', '28', '-preset', 'slow', '-movflags', '+faststart', path.join(DOCS, 'preview.mp4')]);
+run(['-vf', 'setpts=PTS/1.5,fps=12,scale=800:-1:flags=lanczos', '-c:v', 'libwebp_anim', '-quality', '65', '-compression_level', '6', '-loop', '0', path.join(DOCS, 'preview.webp')]);
 fs.rmSync(tmp, { recursive: true, force: true });
-for (const f of ['preview.mp4', 'preview.gif']) console.log(`docs/${f}: ${(fs.statSync(path.join(DOCS, f)).size / 1048576).toFixed(1)} MB`);
+for (const f of ['preview.mp4', 'preview.webp']) console.log(`docs/${f}: ${(fs.statSync(path.join(DOCS, f)).size / 1048576).toFixed(1)} MB`);
